@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ProgressButton">
+        <attr name="bpbProgress" format="integer" />
+        <attr name="bpbProgressColor" format="color" />
+        <attr name="bpbMax" format="integer" />
+        <attr name="bpbText" format="string" />
+        <attr name="bpbTextColor" format="color" />
+        <attr name="bpbTextCoverColor" format="color" />
+        <attr name="bpbTextSize" format="dimension" />
+        <attr name="bpbBorderRadius" format="dimension" />
+        <attr name="bpbBorderColor" format="color" />
+        <attr name="bpbBorderWidth" format="dimension" />
+        <attr name="bpbBackgroundColor" format="color" />
+        <attr name="bpbAnimationDuration" format="integer" />
+    </declare-styleable>
+
+</resources>

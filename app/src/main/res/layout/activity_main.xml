@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.davistsin.progressbutton.MainViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <com.davistsin.widget.BorderProgressButton
+            android:layout_marginTop="64dp"
+            android:id="@+id/progress_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:bpbAnimationDuration="200"
+            app:bpbBorderRadius="50dp"
+            app:bpbBorderWidth="2dp"
+            app:bpbProgress="@{viewModel.progress}"
+            app:bpbText="@{viewModel.progressText}"
+            app:bpbTextSize="22sp" />
+
+        <EditText
+            android:afterTextChanged="@{(charSequence)->viewModel.onEditTextChange(charSequence)}"
+            android:id="@+id/et_input_value"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="50"
+            android:inputType="number" />
+
+        <Button
+            android:onClick="@{() -> viewModel.setValueCLick()}"
+            android:id="@+id/btn_set_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="set value" />
+
+    </LinearLayout>
+</layout>
