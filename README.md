@@ -19,7 +19,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.davistsin:BorderProgressButton:v{latest version}'
+    implementation 'com.github.davistsin:BorderProgressButton:{latest version}'
 }
 
 ```
